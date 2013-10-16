@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 # -*- coding: utf-8 -*-
 """
 A script that can create a track driven sdf model for gazebo.
