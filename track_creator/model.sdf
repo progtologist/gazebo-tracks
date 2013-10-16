@@ -1,0 +1,862 @@
+<sdf version="1.4">
+  <model name="track_creator">
+    <link name="base_link">
+      <self_collide>0</self_collide>
+      <pose>0 0 0.14 0 0 0</pose>
+      <collision name="base_link_collision">
+        <geometry>
+          <box>
+            <size>0.56 0.34 0.14</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="base_link_visual">
+        <geometry>
+          <box>
+            <size>0.56 0.34 0.14</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <link name="drum1">
+      <self_collide>1</self_collide>
+      <pose>0.28 0.22 0.071 1.57079632679 0 0</pose>
+      <collision name="drum1_collision">
+        <geometry>
+          <cylinder>
+            <radius>0.07</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="drum1_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.07</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="drum_joint1">
+      <pose>0 0 0 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>drum1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="drum2">
+      <self_collide>1</self_collide>
+      <pose>0.28 -0.22 0.071 1.57079632679 0 0</pose>
+      <collision name="drum2_collision">
+        <geometry>
+          <cylinder>
+            <radius>0.07</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="drum2_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.07</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="drum_joint2">
+      <pose>0 0 0 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>drum2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="drum3">
+      <self_collide>1</self_collide>
+      <pose>-0.28 0.22 0.071 1.57079632679 0 0</pose>
+      <collision name="drum3_collision">
+        <geometry>
+          <cylinder>
+            <radius>0.07</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="drum3_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.07</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="drum_joint3">
+      <pose>0 0 0 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>drum3</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="drum4">
+      <self_collide>1</self_collide>
+      <pose>-0.28 -0.22 0.071 1.57079632679 0 0</pose>
+      <collision name="drum4_collision">
+        <geometry>
+          <cylinder>
+            <radius>0.07</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="drum4_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.07</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="drum_joint4">
+      <pose>0 0 0 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>drum4</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad1">
+      <self_collide>1</self_collide>
+      <pose>0.1116 0.22 0.0005 0 0.0 0</pose>
+      <collision name="right_pad1_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad1_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint1">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad1</parent>
+      <child>right_pad2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad2">
+      <self_collide>1</self_collide>
+      <pose>0.2232 0.22 0.0005 0 0.0 0</pose>
+      <collision name="right_pad2_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad2_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint2">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad2</parent>
+      <child>right_pad3</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad3">
+      <self_collide>1</self_collide>
+      <pose>0.30865005036 0.22 0.0477706517162 0 -1.01058774345 0</pose>
+      <collision name="right_pad3_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad3_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint3">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad3</parent>
+      <child>right_pad4</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad4">
+      <self_collide>1</self_collide>
+      <pose>0.314009974781 0.22 0.145277045508 0 -2.0211754869 0</pose>
+      <collision name="right_pad4_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad4_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint4">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad4</parent>
+      <child>right_pad5</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad5">
+      <self_collide>1</self_collide>
+      <pose>0.234256054494 0.22 0.201628956026 0 -3.03176323035 0</pose>
+      <collision name="right_pad5_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad5_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint5">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad5</parent>
+      <child>right_pad6</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad6">
+      <self_collide>1</self_collide>
+      <pose>0.122992260145 0.22 0.207745124467 0 3.14159265359 0</pose>
+      <collision name="right_pad6_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad6_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint6">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad6</parent>
+      <child>right_pad7</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad7">
+      <self_collide>1</self_collide>
+      <pose>0.011392260145 0.22 0.207745124467 0 3.14159265359 0</pose>
+      <collision name="right_pad7_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad7_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint7">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad7</parent>
+      <child>right_pad8</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad8">
+      <self_collide>1</self_collide>
+      <pose>-0.100207739855 0.22 0.207745124467 0 3.14159265359 0</pose>
+      <collision name="right_pad8_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad8_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint8">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad8</parent>
+      <child>right_pad9</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad9">
+      <self_collide>1</self_collide>
+      <pose>-0.211807739855 0.22 0.207745124467 0 3.14159265359 0</pose>
+      <collision name="right_pad9_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad9_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint9">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad9</parent>
+      <child>right_pad10</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad10">
+      <self_collide>1</self_collide>
+      <pose>-0.297257790215 0.22 0.160474472751 0 2.13100491014 0</pose>
+      <collision name="right_pad10_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad10_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint10">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad10</parent>
+      <child>right_pad11</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad11">
+      <self_collide>1</self_collide>
+      <pose>-0.302617714636 0.22 0.062968078959 0 1.12041716669 0</pose>
+      <collision name="right_pad11_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad11_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint11">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad11</parent>
+      <child>right_pad12</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad12">
+      <self_collide>1</self_collide>
+      <pose>-0.222863794349 0.22 0.00661616844158 0 0.109829423243 0</pose>
+      <collision name="right_pad12_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad12_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint12">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad12</parent>
+      <child>right_pad13</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad13">
+      <self_collide>1</self_collide>
+      <pose>-0.1116 0.22 0.0005 0 -1.11022302463e-16 0</pose>
+      <collision name="right_pad13_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad13_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint13">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad13</parent>
+      <child>right_pad14</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="right_pad14">
+      <self_collide>1</self_collide>
+      <pose>1.66533453694e-16 0.22 0.0005 0 -1.11022302463e-16 0</pose>
+      <collision name="right_pad14_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_pad14_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="right_pad_joint14">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>right_pad14</parent>
+      <child>right_pad1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad1">
+      <self_collide>1</self_collide>
+      <pose>0.1116 -0.22 0.0005 0 0.0 0</pose>
+      <collision name="left_pad1_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad1_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint1">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad1</parent>
+      <child>left_pad2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad2">
+      <self_collide>1</self_collide>
+      <pose>0.2232 -0.22 0.0005 0 0.0 0</pose>
+      <collision name="left_pad2_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad2_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint2">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad2</parent>
+      <child>left_pad3</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad3">
+      <self_collide>1</self_collide>
+      <pose>0.30865005036 -0.22 0.0477706517162 0 -1.01058774345 0</pose>
+      <collision name="left_pad3_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad3_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint3">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad3</parent>
+      <child>left_pad4</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad4">
+      <self_collide>1</self_collide>
+      <pose>0.314009974781 -0.22 0.145277045508 0 -2.0211754869 0</pose>
+      <collision name="left_pad4_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad4_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint4">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad4</parent>
+      <child>left_pad5</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad5">
+      <self_collide>1</self_collide>
+      <pose>0.234256054494 -0.22 0.201628956026 0 -3.03176323035 0</pose>
+      <collision name="left_pad5_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad5_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint5">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad5</parent>
+      <child>left_pad6</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad6">
+      <self_collide>1</self_collide>
+      <pose>0.122992260145 -0.22 0.207745124467 0 3.14159265359 0</pose>
+      <collision name="left_pad6_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad6_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint6">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad6</parent>
+      <child>left_pad7</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad7">
+      <self_collide>1</self_collide>
+      <pose>0.011392260145 -0.22 0.207745124467 0 3.14159265359 0</pose>
+      <collision name="left_pad7_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad7_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint7">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad7</parent>
+      <child>left_pad8</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad8">
+      <self_collide>1</self_collide>
+      <pose>-0.100207739855 -0.22 0.207745124467 0 3.14159265359 0</pose>
+      <collision name="left_pad8_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad8_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint8">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad8</parent>
+      <child>left_pad9</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad9">
+      <self_collide>1</self_collide>
+      <pose>-0.211807739855 -0.22 0.207745124467 0 3.14159265359 0</pose>
+      <collision name="left_pad9_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad9_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint9">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad9</parent>
+      <child>left_pad10</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad10">
+      <self_collide>1</self_collide>
+      <pose>-0.297257790215 -0.22 0.160474472751 0 2.13100491014 0</pose>
+      <collision name="left_pad10_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad10_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint10">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad10</parent>
+      <child>left_pad11</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad11">
+      <self_collide>1</self_collide>
+      <pose>-0.302617714636 -0.22 0.062968078959 0 1.12041716669 0</pose>
+      <collision name="left_pad11_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad11_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint11">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad11</parent>
+      <child>left_pad12</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad12">
+      <self_collide>1</self_collide>
+      <pose>-0.222863794349 -0.22 0.00661616844158 0 0.109829423243 0</pose>
+      <collision name="left_pad12_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad12_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint12">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad12</parent>
+      <child>left_pad13</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad13">
+      <self_collide>1</self_collide>
+      <pose>-0.1116 -0.22 0.0005 0 -1.11022302463e-16 0</pose>
+      <collision name="left_pad13_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad13_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint13">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad13</parent>
+      <child>left_pad14</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+    <link name="left_pad14">
+      <self_collide>1</self_collide>
+      <pose>1.66533453694e-16 -0.22 0.0005 0 -1.11022302463e-16 0</pose>
+      <collision name="left_pad14_collision">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_pad14_visual">
+        <geometry>
+          <box>
+            <size>0.0893 0.1 0.001</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="left_pad_joint14">
+      <pose>-0.0558 0 0 0 0 0</pose>
+      <parent>left_pad14</parent>
+      <child>left_pad1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+  </model>
+</sdf>
